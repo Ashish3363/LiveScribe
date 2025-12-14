@@ -36,7 +36,7 @@ Live-Scribe is a powerful desktop application that performs real-time speech-to-
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/09samuel/live-scribe.git
+git clone https://github.com/Ashish3363/LiveScribe.git
 cd live-scribe
 ```
 
