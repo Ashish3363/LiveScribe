@@ -1,0 +1,386 @@
+/* General Styles */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #004aad;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-left: 53px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s, border-left 0.3s;
+    border-left: 4px solid transparent;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Active Nav Item */
+.nav-item.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 4px solid #ffcc00;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Logout Button */
+.logout-btn {
+    margin-top: auto;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.logout-btn:hover {
+    color: #ff4d4d;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-photo {
+    position: relative;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #004aad;
+}
+
+.upload-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.user-info span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #004aad;
+}
+
+/* Upload Box */
+.upload-box {
+    background-color: #e3f2fd;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px dashed #004aad;
+    margin-bottom: 20px;
+}
+
+.upload-box .icon {
+    font-size: 40px;
+    color: #004aad;
+}
+
+.file-size {
+    color: gray;
+    font-size: 14px;
+}
+
+.upload-btn {
+    background-color: #004aad;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.upload-btn:hover {
+    background-color: #003080;
+}
+
+/* File Input Styling */
+.file-upload-input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+/* Articles */
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.article {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #004aad;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article h3 {
+    font-size: 16px;
+    color: #004aad;
+}
+
+.article p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+
+.history-content {
+    max-height: 500px; /* Set max height */
+    overflow-y: auto; /* Enables vertical scroll */
+    padding-right: 10px; /* Adjust for scrollbar */
+}
+
+.history-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 10px; /* Space between cards */
+    padding: 10px;
+}
+
+.session-title {
+
+    font-weight: bold; /* Make text bold */
+    padding: 10px 0;
+    font-size: 26px;
+    color: #007bff;
+}
+
+.history-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.trash-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: grey; 
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.trash-icon:hover {
+    color: #007bff; /* Darker blue on hover */
+}
+
+
+.history-card:hover {
+    transform: translateY(-5px);
+}
+
+.summary-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.generate-summary-btn {
+    margin-left: auto;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align title to the left */
+    width: 100%;
+}
+
+.history-controls {
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    gap: 10px;
+    width: 100%; /* Ensures it spans full width */
+    margin-top: 10px; /* Adds space below the title */
+}
+
+
+.filter-btn, .dropdown-btn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-btn:hover, .dropdown-btn:hover {
+    background-color: #0056b3;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Ensure modal covers the whole screen */
+.filter-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures it appears above everything */
+}
+
+/* Style the modal content */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Ensures it stays on top */
+    position: relative;
+}
+
+/* Style input fields */
+.modal-content input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Buttons inside modal */
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.modal-buttons button {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-buttons button:first-child {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-buttons button:first-child:hover {
+    background-color: #0056b3;
+}
+
+.modal-buttons button:last-child {
+    background-color: #ccc;
+}
+
+.modal-buttons button:last-child:hover {
+    background-color: #999;
+}
